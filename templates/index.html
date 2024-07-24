@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code</title>
+</head>
+<body>
+    <div class = "title">
+        <h1>QR Code Generator</h1>
+        <h1>Insert a link below to generate a QR Code</h1>
+    </div>
+    <form action ="/" method ="Post">
+        <input type = "text" name = 'link' />
+        <button type = "submit">Generate QR</button>
+    </form>
+    {% if data %}
+    <div class = "generated">
+        <img src ="{{data}}" alt = "">
+        <p>Here is the QR Code generated: </p>
+    </div>
+    {% endif %}
+</body>
+</html>
